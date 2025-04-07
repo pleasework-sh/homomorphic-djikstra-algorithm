@@ -4,6 +4,8 @@ use std::cmp::Ordering;
 use std::collections::BinaryHeap;
 
 
+/*
+
 // TODO: modify this to work on simple array representation
 
 // TODO: modify this to give me the shortest path between two elements, not just the cost
@@ -80,3 +82,4 @@ pub fn shortest_path(adj_list: &Vec<Vec<Edge>>, start: usize, goal: usize) -> Op
     // Goal not reachable
     None
 }
+    */
