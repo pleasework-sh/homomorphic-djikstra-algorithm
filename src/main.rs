@@ -1,4 +1,5 @@
-mod djikstra-unec;
+mod djikstra_unec;
+use djikstra_unec::{Edge, shortest_path};
 
 fn main() {
     // This is the directed graph we're going to use.
