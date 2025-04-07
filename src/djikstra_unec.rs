@@ -8,9 +8,9 @@ use std::collections::BinaryHeap;
 
 // TODO: modify this to give me the shortest path between two elements, not just the cost
 #[derive(Copy, Clone, Eq, PartialEq)]
-struct State {
-    cost: usize,
-    position: usize,
+pub struct State {
+    pub cost: usize,
+    pub position: usize,
 }
 
 // The priority queue depends on `Ord`.
@@ -34,9 +34,9 @@ impl PartialOrd for State {
 }
 
 // Each node is represented as a `usize`, for a shorter implementation.
-struct Edge {
-    node: usize,
-    cost: usize,
+pub struct Edge {
+    pub node: usize,
+    pub cost: usize,
 }
 
 // Dijkstra's shortest path algorithm.
@@ -45,7 +45,7 @@ struct Edge {
 // to each node. This implementation isn't memory-efficient as it may leave duplicate
 // nodes in the queue. It also uses `usize::MAX` as a sentinel value,
 // for a simpler implementation.
-fn shortest_path(adj_list: &Vec<Vec<Edge>>, start: usize, goal: usize) -> Option<usize> {
+pub fn shortest_path(adj_list: &Vec<Vec<Edge>>, start: usize, goal: usize) -> Option<usize> {
     // dist[node] = current shortest distance from `start` to `node`
     let mut dist: Vec<_> = (0..adj_list.len()).map(|_| usize::MAX).collect();
 
